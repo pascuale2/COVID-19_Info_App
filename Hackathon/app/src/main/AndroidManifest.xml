@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hackathon_application">
+        <activity android:name=".Age"></activity>
+        <activity android:name=".Info" />
+        <activity android:name=".Statistics" />
+        <activity android:name=".Map" />
+        <activity android:name=".Calendar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

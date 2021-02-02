@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    - Main-screen UI created & designed by:
+        ~> Erwin Pascual
+    - Edited By:
+        ~>
+-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,7 +12,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_screen2"
     tools:context=".MainActivity">
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -24,9 +29,8 @@
         android:textSize="48dp"
 
         android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="2"/>
+        android:shadowDy="4"
+        android:shadowRadius="8"/>
 
     <LinearLayout
         android:id="@+id/linearlayout"
@@ -34,6 +38,7 @@
         android:layout_height="679dp"
         android:background="@drawable/white_top_curve"
         android:orientation="vertical"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <!-- Layout for Map Button -->
@@ -47,57 +52,92 @@
 
             android:paddingTop="30dp"
             android:paddingBottom="0dp">
+
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:layout_weight="1"
 
-                android:orientation="vertical"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="175dp"
                     android:layout_height="175dp"
-
-                    android:background="@drawable/map_btn"
-                    android:orientation="vertical"
-                    android:elevation="5dp"
-
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/map_btn"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:onClick="goToMaps">
+
                     <ImageView
-                        android:background="@drawable/map2"
                         android:layout_width="140dp"
                         android:layout_height="140dp"
                         android:layout_gravity="center"
-                        android:elevation="5dp"
-                        android:layout_marginTop="0dp"/>
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/map2"
+                        android:elevation="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/opensans_semibold"
+
+                        android:shadowColor="#000000"
+                        android:shadowDy="4"
+                        android:shadowRadius="8"
+
+                        android:text="Maps"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
                 </LinearLayout>
             </LinearLayout>
 
+            <!-- Layout for Calendar Button -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:layout_weight="1"
 
-                android:orientation="vertical"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="175dp"
                     android:layout_height="175dp"
-                    android:background="@drawable/calendar_btn"
-                    android:orientation="vertical"
-                    android:elevation="5dp"
-
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/calendar_btn"
+
+                    android:elevation="5dp"
+                    android:orientation="vertical"
+                    android:onClick="goToCalendar">
 
                     <ImageView
-                        android:background="@drawable/calendar2"
                         android:layout_width="140dp"
                         android:layout_height="140dp"
                         android:layout_gravity="center"
-                        android:elevation="5dp"
-                        android:layout_marginTop="0dp"/>
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/calendar2"
+                        android:elevation="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/opensans_semibold"
+
+                        android:shadowColor="#000000"
+                        android:shadowDy="4"
+                        android:shadowRadius="8"
+
+                        android:text="Calendar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -105,18 +145,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:layout_weight="2"
+
             android:orientation="horizontal"
+            android:paddingLeft="10dp">
 
-            android:paddingLeft="10dp"
-            android:layout_marginTop="5dp">
-
+            <!-- Layout for Age Button -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:layout_weight="1"
 
-                android:elevation="5dp"
+                android:elevation="2dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -128,24 +169,40 @@
                     android:background="@drawable/age_btn"
 
                     android:elevation="5dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="goToAge">
 
                     <ImageView
-                        android:layout_width="140dp"
-                        android:layout_height="140dp"
+                        android:layout_width="135dp"
+                        android:layout_height="135dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="0dp"
                         android:background="@drawable/age"
                         android:elevation="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/opensans_semibold"
+
+                        android:shadowColor="#000000"
+                        android:shadowDy="4"
+                        android:shadowRadius="8"
+
+                        android:text="Age of Death"
+                        android:textColor="#FFFFFF"
+                        android:textSize="23dp" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:layout_weight="1"
 
-                android:elevation="5dp"
+                android:elevation="2dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -157,8 +214,6 @@
 
                     android:elevation="5dp"
                     android:orientation="vertical">
-
-
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -166,20 +221,21 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
             android:layout_weight="2"
-            android:orientation="horizontal"
 
-            android:paddingLeft="10dp"
-            android:layout_marginBottom="60dp">
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:layout_weight="1"
 
-                android:elevation="5dp"
+                android:elevation="2dp"
                 android:orientation="vertical">
 
+                <!-- Layout for Statistics Button -->
                 <LinearLayout
                     android:layout_width="175dp"
                     android:layout_height="175dp"
@@ -189,7 +245,8 @@
                     android:background="@drawable/bar_btn"
 
                     android:elevation="5dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="goToStatistics">
 
                     <ImageView
                         android:layout_width="140dp"
@@ -198,17 +255,33 @@
                         android:layout_marginTop="0dp"
                         android:background="@drawable/bar_graph2"
                         android:elevation="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/opensans_semibold"
+
+                        android:shadowColor="#000000"
+                        android:shadowDy="4"
+                        android:shadowRadius="8"
+
+                        android:text="Statistics"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:layout_weight="1"
 
-                android:elevation="5dp"
+                android:elevation="2dp"
                 android:orientation="vertical">
 
+                <!-- Layout for Info Button -->
                 <LinearLayout
                     android:layout_width="175dp"
                     android:layout_height="175dp"
@@ -217,7 +290,8 @@
                     android:background="@drawable/info_btn"
 
                     android:elevation="5dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="goToInfo">
 
                     <ImageView
                         android:layout_width="140dp"
@@ -226,6 +300,21 @@
                         android:layout_marginTop="0dp"
                         android:background="@drawable/info2"
                         android:elevation="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/opensans_semibold"
+
+                        android:shadowColor="#000000"
+                        android:shadowDy="4"
+                        android:shadowRadius="8"
+
+                        android:text="Info"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

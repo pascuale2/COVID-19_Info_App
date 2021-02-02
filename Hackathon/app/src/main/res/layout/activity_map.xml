@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    - Map-screen UI created & designed by:
+        ~> Erwin Pascual
+    - Edited By:
+        ~>
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Map"
+    android:background="@drawable/screen2">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/opensans_semibold"
+        android:shadowColor="#000000"
+        android:shadowDy="4"
+        android:shadowRadius="8"
+
+        android:text="Map"
+        android:textColor="#FFFFFF"
+        android:textSize="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearlayout"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="695dp"
+        android:background="@drawable/white_top_curve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
